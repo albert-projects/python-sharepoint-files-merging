@@ -1,0 +1,256 @@
+<?xml version='1.0' encoding='utf-8'?>
+<interface version="1.3">
+  <object class="tk.Toplevel" id="mainToplevel" named="True">
+    <property name="background">#e0e0e0</property>
+    <property name="geometry">768x576</property>
+    <property name="height">576</property>
+    <property name="resizable">none</property>
+    <property name="title" translatable="yes">MSC Merge Files in SharePoint (v0.1)</property>
+    <property name="width">768</property>
+    <child>
+      <object class="ttk.Label" id="lbl_username" named="True">
+        <property name="background">#e0e0e0</property>
+        <property name="text" translatable="yes">Username :</property>
+        <layout manager="place">
+          <property name="anchor">nw</property>
+          <property name="x">20</property>
+          <property name="y">20</property>
+        </layout>
+      </object>
+    </child>
+    <child>
+      <object class="ttk.Label" id="lbl_password" named="True">
+        <property name="background">#e0e0e0</property>
+        <property name="text" translatable="yes">Password :</property>
+        <layout manager="place">
+          <property name="anchor">nw</property>
+          <property name="x">20</property>
+          <property name="y">40</property>
+        </layout>
+      </object>
+    </child>
+    <child>
+      <object class="ttk.Entry" id="ent_username" named="True">
+        <property name="width">30</property>
+        <layout manager="place">
+          <property name="anchor">nw</property>
+          <property name="x">90</property>
+          <property name="y">20</property>
+        </layout>
+      </object>
+    </child>
+    <child>
+      <object class="ttk.Entry" id="ent_password" named="True">
+        <property name="show">•</property>
+        <property name="width">30</property>
+        <layout manager="place">
+          <property name="anchor">nw</property>
+          <property name="x">90</property>
+          <property name="y">40</property>
+        </layout>
+      </object>
+    </child>
+    <child>
+      <object class="ttk.Button" id="btn_auth" named="True">
+        <property name="command" type="command" cbtype="simple">authenticate</property>
+        <property name="text" translatable="yes">Login</property>
+        <layout manager="place">
+          <property name="anchor">nw</property>
+          <property name="x">300</property>
+          <property name="y">30</property>
+        </layout>
+      </object>
+    </child>
+    <child>
+      <object class="ttk.Button" id="btn_merge" named="True">
+        <property name="command" type="command" cbtype="simple">download_files</property>
+        <property name="text" translatable="yes">Merge</property>
+        <layout manager="place">
+          <property name="anchor">nw</property>
+          <property name="x">50</property>
+          <property name="y">480</property>
+        </layout>
+      </object>
+    </child>
+    <child>
+      <object class="tk.Listbox" id="lst_file" named="True">
+        <property name="selectmode">multiple</property>
+        <layout manager="place">
+          <property name="anchor">nw</property>
+          <property name="height">250</property>
+          <property name="width">650</property>
+          <property name="x">50</property>
+          <property name="y">120</property>
+        </layout>
+      </object>
+    </child>
+    <child>
+      <object class="ttk.Combobox" id="cmb_year" named="True">
+        <property name="state">readonly</property>
+        <layout manager="place">
+          <property name="anchor">nw</property>
+          <property name="width">80</property>
+          <property name="x">90</property>
+          <property name="y">80</property>
+        </layout>
+      </object>
+    </child>
+    <child>
+      <object class="ttk.Label" id="lbl_year" named="True">
+        <property name="background">#e0e0e0</property>
+        <property name="text" translatable="yes">Year</property>
+        <layout manager="place">
+          <property name="anchor">nw</property>
+          <property name="x">50</property>
+          <property name="y">80</property>
+        </layout>
+      </object>
+    </child>
+    <child>
+      <object class="ttk.Label" id="lbl_stage" named="True">
+        <property name="background">#e0e0e0</property>
+        <property name="text" translatable="yes">Stage</property>
+        <layout manager="place">
+          <property name="anchor">nw</property>
+          <property name="x">200</property>
+          <property name="y">80</property>
+        </layout>
+      </object>
+    </child>
+    <child>
+      <object class="ttk.Combobox" id="cmb_grade" named="True">
+        <property name="state">readonly</property>
+        <layout manager="place">
+          <property name="anchor">nw</property>
+          <property name="width">80</property>
+          <property name="x">250</property>
+          <property name="y">80</property>
+        </layout>
+      </object>
+    </child>
+    <child>
+      <object class="ttk.Label" id="lbl_task" named="True">
+        <property name="background">#e0e0e0</property>
+        <property name="text" translatable="yes">Task</property>
+        <layout manager="place">
+          <property name="anchor">nw</property>
+          <property name="x">370</property>
+          <property name="y">80</property>
+        </layout>
+      </object>
+    </child>
+    <child>
+      <object class="ttk.Combobox" id="cmb_task" named="True">
+        <property name="state">readonly</property>
+        <layout manager="place">
+          <property name="anchor">nw</property>
+          <property name="width">80</property>
+          <property name="x">410</property>
+          <property name="y">80</property>
+        </layout>
+      </object>
+    </child>
+    <child>
+      <object class="ttk.Button" id="btn_list" named="True">
+        <property name="command" type="command" cbtype="simple">list_files</property>
+        <property name="text" translatable="yes">List Files</property>
+        <layout manager="place">
+          <property name="anchor">nw</property>
+          <property name="x">520</property>
+          <property name="y">75</property>
+        </layout>
+      </object>
+    </child>
+    <child>
+      <object class="ttk.Entry" id="ent_saveas" named="True">
+        <property name="width">70</property>
+        <layout manager="place">
+          <property name="anchor">nw</property>
+          <property name="width">540</property>
+          <property name="x">50</property>
+          <property name="y">400</property>
+        </layout>
+      </object>
+    </child>
+    <child>
+      <object class="ttk.Label" id="lbl_output" named="True">
+        <property name="background">#e0e0e0</property>
+        <property name="text" translatable="yes">Output location :</property>
+        <layout manager="place">
+          <property name="anchor">nw</property>
+          <property name="x">50</property>
+          <property name="y">380</property>
+        </layout>
+      </object>
+    </child>
+    <child>
+      <object class="ttk.Button" id="btn_change" named="True">
+        <property name="command" type="command" cbtype="simple">change_location</property>
+        <property name="text" translatable="yes">Change location</property>
+        <layout manager="place">
+          <property name="anchor">nw</property>
+          <property name="x">600</property>
+          <property name="y">395</property>
+        </layout>
+      </object>
+    </child>
+    <child>
+      <object class="ttk.Frame" id="frm_loading" named="True">
+        <layout manager="place">
+          <property name="anchor">nw</property>
+          <property name="height">250</property>
+          <property name="width">650</property>
+          <property name="x">0</property>
+          <property name="y">120</property>
+        </layout>
+        <child>
+          <object class="tk.Label" id="lbl_loading_bg" named="True">
+            <property name="background">#ffffff</property>
+            <property name="justify">left</property>
+            <property name="takefocus">false</property>
+            <layout manager="place">
+              <property name="anchor">nw</property>
+              <property name="height">250</property>
+              <property name="width">650</property>
+              <property name="x">0</property>
+              <property name="y">0</property>
+            </layout>
+          </object>
+        </child>
+        <child>
+          <object class="ttk.Label" id="label1">
+            <property name="background">#ffffff</property>
+            <property name="image">loading.gif</property>
+            <layout manager="place">
+              <property name="anchor">nw</property>
+              <property name="x">100</property>
+              <property name="y">-20</property>
+            </layout>
+          </object>
+        </child>
+      </object>
+    </child>
+    <child>
+      <object class="ttk.Entry" id="ent_filename" named="True">
+        <property name="width">70</property>
+        <layout manager="place">
+          <property name="anchor">nw</property>
+          <property name="width">540</property>
+          <property name="x">50</property>
+          <property name="y">450</property>
+        </layout>
+      </object>
+    </child>
+    <child>
+      <object class="ttk.Label" id="lbl_filename" named="True">
+        <property name="background">#e0e0e0</property>
+        <property name="text" translatable="yes">Output filename :</property>
+        <layout manager="place">
+          <property name="anchor">nw</property>
+          <property name="x">50</property>
+          <property name="y">430</property>
+        </layout>
+      </object>
+    </child>
+  </object>
+</interface>
