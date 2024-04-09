@@ -57,9 +57,7 @@
 <li>Microsoft Graph API</li>
 <li>SharePoint API</li>
 </ul>
-<p>![Screenshot]<br>
-(<a href="https://github.com/albert-projects/python-sharepoint-files-merging/blob/master/screenshot.png">https://github.com/albert-projects/python-sharepoint-files-merging/blob/master/screenshot.png</a>)</p>
-<hr>
+<h2 id="section"><img src="https://github.com/albert-projects/python-sharepoint-files-merging/blob/master/screenshot.png" alt="Screenshot"></h2>
 <p>python-sharepoint-files-merging<br>
 Albert Kwan</p>
 
